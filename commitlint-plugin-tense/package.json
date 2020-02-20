@@ -13,7 +13,7 @@
     "email": "info@extendaretail.com",
     "url": "https://extendaretail.com"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "homepage": "https://github.com/extenda/pre-commit-hooks#readme",
   "peerDependencies": {
     "@commitlint/lint": "^8.3.5"

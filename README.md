@@ -43,4 +43,13 @@ To support GitHub actions, the docker image offers an alternative entrypoint und
 Usage: action [-c <sha>] [-m <message>]
 ```
 
-Extenda Retail provides a GitHub action out-of-the-box available at https://github.com/extenda/actions/commitlint.
+Extenda Retail provides a GitHub action out-of-the-box available
+ at https://github.com/extenda/actions/commitlint.
+
+## :page_with_curl: License
+
+This project is licensed under the [MIT license](./LICENSE.md).
+
+### Attributions
+
+This project contains a list imperative mood blacklist from the MIT licensed [git-good-commit](https://github.com/tommarshall/git-good-commit) project.
