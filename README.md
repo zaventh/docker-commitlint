@@ -48,7 +48,7 @@ Extenda Retail provides a GitHub action out-of-the-box available
 
 ## :page_with_curl: License
 
-This project is licensed under the [MIT license](./LICENSE.md).
+This project is licensed under the [MIT license](./LICENSE).
 
 ### Attributions
 
