@@ -15,7 +15,7 @@ module.exports = {
             if (!subject) {
                 return [true];
             }
-            const success = blacklist.every((word) => !subject.includes(word));
+            const success = blacklist.every((word) => !subject.toLowerCase().includes(word));
             return [success, "Use the imperative mood in the subject, e.g 'fix' not 'fixes'"];
         }
     }
