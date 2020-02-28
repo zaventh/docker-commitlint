@@ -11,11 +11,11 @@ const blacklist = fs.readFileSync(path.join(__dirname, 'blacklist.txt'), 'utf8')
 module.exports = {
     rules: {
         'imperative-tense': (parsed, when) => {
-            const { subject } = parsed;
-            if (!subject) {
+            if (!parsed.subject) {
                 return [true];
             }
-            const success = blacklist.every((word) => !subject.toLowerCase().includes(word));
+            const subject = parsed.subject.toLowerCase();
+            const success = blacklist.every((word) => !subject.match(`^${word}\\b`));
             return [success, "Use the imperative mood in the subject, e.g 'fix' not 'fixes'"];
         }
     }
