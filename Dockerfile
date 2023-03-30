@@ -1,18 +1,21 @@
-FROM node:13-alpine
+# syntax=docker/dockerfile:1.3
+FROM node:18-alpine
 
-WORKDIR /work/
+ENV APPDIR /app
+WORKDIR ${APPDIR}
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh
+COPY . ${APPDIR}/
 
-COPY package*.json ./
-COPY commitlint.config.js ./
-COPY commitlint-plugin-tense/ ./commitlint-plugin-tense/
-COPY bin/commitlint.sh /usr/local/bin/commitlint
-COPY bin/action.sh /usr/local/bin/action
+RUN \
+    --mount=type=cache,target=/var/cache/apk \
+    apk update && \
+    apk add bash git openssh
 
-RUN npm ci --production
-RUN npm ci --prefix commitlint-plugin-tense --production
-RUN rm -rf ~/.npm
+RUN \
+    --mount=type=cache,target=${APPDIR}/.cache/yarn \
+    yarn install --frozen-lockfile --production && \
+    rm yarn.lock && \
+    git config --global --add safe.directory /app
 
-ENTRYPOINT ["/usr/local/bin/commitlint"]
+
+ENTRYPOINT ["bin/commitlint"]

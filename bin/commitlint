@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ARGS="--config /work/commitlint.config.js"
+ARGS="--config /app/commitlint.config.js"
 
 if [ "$1" == ".git/COMMIT_EDITMSG" ]; then
   # Running from pre-commit hook.
@@ -11,4 +11,4 @@ else
 fi
 
 # shellcheck disable=SC2086
-exec /work/node_modules/.bin/commitlint $ARGS
+exec /app/node_modules/.bin/commitlint $ARGS
