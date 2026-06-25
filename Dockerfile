@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.3
-FROM node:18-alpine
+FROM node:24-alpine
 
 ENV APPDIR /app
 WORKDIR ${APPDIR}
@@ -12,9 +12,8 @@ RUN \
     apk add bash git openssh
 
 RUN \
-    --mount=type=cache,target=${APPDIR}/.cache/yarn \
-    yarn install --frozen-lockfile --production && \
-    rm yarn.lock && \
+    --mount=type=cache,target=/root/.npm \
+    NODE_ENV=production npm install --omit=dev && \
     git config --global --add safe.directory /app
 
 

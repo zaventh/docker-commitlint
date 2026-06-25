@@ -12,8 +12,8 @@
   "license": "MIT",
   "homepage": "https://github.com/extenda/pre-commit-hooks#readme",
   "dependencies": {
-    "@commitlint/cli": "^17.5.1",
-    "@commitlint/config-conventional": "^17.4.4",
-    "commitlint-plugin-tense": "file:commitlint-plugin-tense"
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "commitlint-plugin-tense": "^1.0.10"
   }
 }

@@ -3,9 +3,9 @@ module.exports = {
         '@commitlint/config-conventional',
     ],
     plugins: [
-        'tense',
+        'commitlint-plugin-tense',
     ],
     rules: {
-        'imperative-tense': [2, 'always'],
+        'tense/subject-tense': [1, 'always'],
     }
 };
