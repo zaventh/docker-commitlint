@@ -67,4 +67,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: ${{ env.IMAGE }}
-          short-description: "Preconfigured commitlint image: Conventional Commits + imperative-mood checking as CLI, pre-commit hook, or GitHub Action."
+          short-description: "Conventional Commits linter in Docker: CLI, pre-commit hook, or GitHub Action"
