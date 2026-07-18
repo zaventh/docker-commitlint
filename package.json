@@ -1,16 +1,31 @@
 {
-  "name": "pre-commitlint",
-  "version": "0.0.1-local",
-  "description": "Commitlint pre-commit hook",
+  "name": "docker-commitlint",
+  "version": "1.0.0",
+  "description": "Preconfigured Docker image for commitlint with Conventional Commits and imperative-mood subject checking. Use as a standalone CLI, a pre-commit hook, or a GitHub Action.",
   "private": true,
-  "repository": "github:extenda/pre-commit-hooks",
+  "keywords": [
+    "commitlint",
+    "conventional-commits",
+    "git-hooks",
+    "pre-commit",
+    "docker",
+    "linter",
+    "commit-message",
+    "github-action"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaventh/docker-commitlint.git"
+  },
   "author": {
-    "name": "Extenda Retail",
-    "email": "info@extendaretail.com",
-    "url": "https://extendaretail.com"
+    "name": "Jeff Mixon",
+    "url": "https://github.com/zaventh"
   },
   "license": "MIT",
-  "homepage": "https://github.com/extenda/pre-commit-hooks#readme",
+  "homepage": "https://github.com/zaventh/docker-commitlint#readme",
+  "bugs": {
+    "url": "https://github.com/zaventh/docker-commitlint/issues"
+  },
   "dependencies": {
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
