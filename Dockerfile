@@ -13,7 +13,7 @@ RUN \
 
 RUN \
     --mount=type=cache,target=/root/.npm \
-    NODE_ENV=production npm install --omit=dev && \
+    NODE_ENV=production npm ci --omit=dev && \
     git config --global --add safe.directory /app
 
 
