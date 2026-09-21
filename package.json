@@ -29,6 +29,9 @@
   "dependencies": {
     "@commitlint/cli": "^21.2.2",
     "@commitlint/config-conventional": "^21.2.2",
-    "commitlint-plugin-tense": "^1.0.10"
+    "commitlint-plugin-tense": "github:zaventh/commitlint-plugin-tense#fix/head-word-senses"
+  },
+  "allowScripts": {
+    "github:zaventh/commitlint-plugin-tense": true
   }
 }
