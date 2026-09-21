@@ -6,6 +6,6 @@ module.exports = {
         'commitlint-plugin-tense',
     ],
     rules: {
-        'tense/subject-tense': [1, 'always'],
+        'tense/subject-tense': [1, 'always', { allowlist: ['bound'] }],
     }
 };
